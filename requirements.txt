@@ -1,0 +1,8 @@
+discord.py==2.7.0
+FastAPI==0.135.1
+uvicorn[standard]==0.41.0
+aiohttp[speedups]==3.13.3
+aiosqlite==0.22.1
+pydantic==2.12.5
+python-dotenv==1.2.2
+loguru==0.7.3
