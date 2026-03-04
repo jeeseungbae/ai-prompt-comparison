@@ -1,0 +1,72 @@
+# 환경변수 및 시크릿
+.env
+.env.local
+.env.*.local
+
+# 데이터베이스
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+.installed.cfg
+MANIFEST
+
+# 가상환경
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# 테스트
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# 타입 체커
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# 로그
+*.log
+logs/
+
+# 빌드 아티팩트
+*.pyc
+*.pyo
