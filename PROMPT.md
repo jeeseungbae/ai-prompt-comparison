@@ -6,7 +6,7 @@
 3. Claude가 끝날 때까지 추가 입력 없이 기다립니다
 
 ## 프롬프트
-
+/hyperplan
 주택청약 정보 디스코드 봇을 Python으로 만들어줘.
 
 기술스택: Python 3.12, discord.py 2.7.0 (hybrid_command), FastAPI 0.135.1, aiohttp, aiosqlite, python-dotenv, loguru
