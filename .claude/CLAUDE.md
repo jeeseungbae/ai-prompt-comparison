@@ -52,11 +52,7 @@ LOG_LEVEL=INFO
 단일 에이전트로 순차 작업하지 않는다.
 
 ### 필수 워크플로우
-1. 어떤 요청이든 `.claude/AGENTS.md`의 워크플로우를 따른다
-2. 코드 작성은 반드시 executor 에이전트에게 위임한다
-3. 독립적인 작업(services/ 구현, cogs/ 구현)은 병렬로 실행한다
-4. 구현 완료 후 qa-tester, security-reviewer를 동시에 실행한다
-5. 모든 작업 완료 후 architect가 최종 승인해야 완료로 간주한다
+어떤 요청이든 `.claude/AGENTS.md`의 워크플로우를 따른다.
 
 ### 에이전트 모델 배정
 - architect: opus (설계/검토는 정확성이 중요)
@@ -66,10 +62,5 @@ LOG_LEVEL=INFO
 - 단순 조회/탐색: haiku
 
 ## Never
-- API 키 하드코딩
-- .env 파일 커밋
-- async 컨텍스트에서 blocking I/O (requests, time.sleep 등)
 - API rate limit 무시
-- serviceKey를 Discord 메시지나 로그에 노출
-- 단일 에이전트로 전체 프로젝트를 순차 구현
-- architect 승인 없이 작업 완료 선언
+- 보안/코드/API 세부 규칙은 `rules/` 참조

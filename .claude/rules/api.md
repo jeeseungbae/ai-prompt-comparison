@@ -40,7 +40,7 @@
 - 모든 외부 호출은 aiohttp 비동기 필수
 - 실패 시 3회 재시도 exponential backoff (1s, 2s, 4s)
 - 재시도 초과 시 사용자에게 한국어로 안내
-- aiohttp 세션은 봇 시작 시 생성, 종료 시 close
+- aiohttp 세션 생명주기/커넥션 풀은 `architecture.md` 성능 기준 참조
 
 ## 명령어 매핑
 | 명령어 | API | 설명 |

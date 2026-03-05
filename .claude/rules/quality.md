@@ -8,7 +8,7 @@
 - 사용자 대면 에러 메시지는 한국어, 친절한 톤
 
 ## 에러 처리
-- API 호출 실패: 3회 재시도 exponential backoff (1s, 2s, 4s)
+- API 호출 재시도 규칙은 `api.md` 참조
 - Discord 명령어 에러: 한국어 Embed로 사용자에게 안내
 - 비즈니스 에러: 커스텀 Exception + HTTP 상태코드 매핑
 - 예상 외 에러: global exception handler로 일괄 처리

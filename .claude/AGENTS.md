@@ -22,25 +22,19 @@
 
 ### executor (구현자)
 - architect가 결정한 구조대로 코드 작성
-- services/와 cogs/는 **별도 executor로 병렬 구현** 가능
 - `.claude/rules/` 아래 모든 규칙 파일을 읽고 준수
-- 구현 완료 후 ruff check + ruff format 통과 필수
 
 ### qa-tester (검증자)
 - 구현 완료된 코드에 대해 pytest 테스트 작성
-- pytest-asyncio strict 모드 사용
 - 테스트 실패 시 executor에게 수정 요청
-- 모든 테스트 통과 + ruff clean 확인 후 완료
+- 테스트/린트 기준은 `rules/quality.md` 참조
 
 ### security-reviewer (보안 검토자)
-- API 키가 코드에 하드코딩되지 않았는지 확인
-- 사용자 입력이 검증 없이 사용되는지 확인
-- serviceKey가 로그나 Discord 메시지에 노출되는지 확인
+- `rules/security.md` 기준으로 보안 위반 여부 확인
 
 ## 병렬 실행 규칙
-- services/와 cogs/ 구현은 동시 진행 가능
-- tests/는 구현 완료 후에만 시작
-- security 검토는 구현 완료 후 qa-tester와 동시 진행 가능
+- 독립적인 레이어(services/, cogs/)는 동시 진행 가능
+- tests/와 security 검토는 구현 완료 후 동시 진행 가능
 - architect 최종 검토는 모든 작업 완료 후
 
 ## 에이전트 간 규칙

@@ -16,6 +16,6 @@
 - 파일 경로에 사용자 입력 사용 시 path traversal 방지
 
 ## 네트워크 보안
-- 외부 API 호출 시 timeout 필수 (기본 10초)
 - HTTPS만 사용
 - 응답 크기 제한 (비정상적으로 큰 응답 차단)
+- 타임아웃/비동기 규칙은 `architecture.md`, `api.md` 참조
